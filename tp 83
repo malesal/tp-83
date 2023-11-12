@@ -1,34 +1,30 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void encontrarPrimerElementoParEnPosicionDivisiblePor3(const vector<int> & V);
+int PrimerElementoPar(vector<int> V);
 
 int main() {
-    vector<int> V;
     int n;
-
-    cout << "Ingresa la cantidad de números: ";
-    cin >> n;
-
-    cout << "Ingresa los números:" << endl;
-    
-    for (int i = 0; i < n; i++) {
+    vector<int> V;
+   
+    cout << "Ingresa la cantidad de números: "<<endl;
+     for (int i = 0; i < n; i++) {
         int num;
         cin >> num;
         V.push_back(num);
     }
-
-    cout << "El primer elemento par en una posición divisible por 3 se encuentra en el índice: ";
-    encontrarPrimerElementoParEnPosicionDivisiblePor3(V);
+    int resultado=int PrimerElementoPar(V);
+    cout<<"el primer numero divisible por 3 es: "<<resultado<<endl;
 
     return 0;
 }
 
-void encontrarPrimerElementoParEnPosicionDivisiblePor3(const vector<int> & V) {
+   int PrimerElementoPar(vector<int> V){
+   int num;
     for (int i = 0; i < V.size(); i++) {
-        if (i % 3 == 0 && V[i] % 2 == 0) {
-            cout << i << endl;
-            return; 
-        }
+        if (i %  2== 0 && V[i] % 3 == 0) {
+          num+=v[i];
     }
-}   
+      return num;
+   }
+ }
